@@ -113,21 +113,21 @@
         $(window).resize(function () {
           var h = $(window).height(),
             offsetTop = 105; // Calculate the top offset
-        
+
           $('#map_canvas').css('height', (h - offsetTop));
         }).resize();
-        
+
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
+            fusionTableId:      "1C2udCrunvxp5MZ_WI-jJ1Ci-6_lnRUMVtrlf4mxs",
+            /*googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",*/
             locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago"
+            map_center:         [37.686995, -97.328344],
+            locationScope:      "Kansas"
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
-      
+
           $(':checkbox').click(function(){
             myMap.doSearch();
           });
@@ -135,25 +135,25 @@
           $(':radio').click(function(){
             myMap.doSearch();
           });
-          
+
           $('#search_radius').change(function(){
             myMap.doSearch();
           });
-          
+
           $('#search').click(function(){
             myMap.doSearch();
           });
-          
+
           $('#find_me').click(function(){
-            myMap.findMe(); 
+            myMap.findMe();
             return false;
           });
-          
+
           $('#reset').click(function(){
-            myMap.reset(); 
+            myMap.reset();
             return false;
           });
-          
+
           $(":text").keydown(function(e){
               var key =  e.keyCode ? e.keyCode : e.which;
               if(key === 13) {
