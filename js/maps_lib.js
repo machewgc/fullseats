@@ -24,7 +24,7 @@
         this.locationScope = options.locationScope || "";
 
         // zoom level when map is loaded (bigger is more zoomed in)
-        this.defaultZoom = options.defaultZoom || 10; 
+        this.defaultZoom = options.defaultZoom || 10;
 
         // center that your map defaults to
         this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
@@ -159,7 +159,8 @@
         var self = this;
         self.clearSearch();
         var address = $("#search_address").val();
-        self.searchRadius = $("#search_radius").val();
+        //self.searchRadius = $("#search_radius").val();
+        self.searchRadius = 1;
         self.whereClause = self.locationColumn + " not equal to ''";
 
         //-----custom filters-----
