@@ -24,7 +24,7 @@
         this.locationScope = options.locationScope || "";
 
         // zoom level when map is loaded (bigger is more zoomed in)
-        this.defaultZoom = options.defaultZoom || 10;
+        this.defaultZoom = options.defaultZoom || 7;
 
         // center that your map defaults to
         this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
