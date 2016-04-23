@@ -63,3 +63,7 @@ canvas {-ms-touch-action: double-tap-zoom;}
     transform: rotate(90deg);
     color: #454444;
 }
+
+.flag {
+  width: 25%;
+}
