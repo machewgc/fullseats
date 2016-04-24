@@ -67,3 +67,8 @@ canvas {-ms-touch-action: double-tap-zoom;}
 .flag {
   width: 25%;
 }
+
+.bigger-header {
+  font-size: 72px;
+  color: #1B84B5;
+}
