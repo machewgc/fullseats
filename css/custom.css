@@ -77,6 +77,8 @@ canvas {-ms-touch-action: double-tap-zoom;}
   width: 75%;
 }
 
+
+
 .carousel-inner>.item {
   padding: 15px;
   align-content: center;
@@ -94,6 +96,7 @@ canvas {-ms-touch-action: double-tap-zoom;}
 
 .jumbotron {
   background-color: #147FD7;
+  padding: 4vh;
 }
 
 .jumbotron:first-of-type {
@@ -101,6 +104,7 @@ canvas {-ms-touch-action: double-tap-zoom;}
 }
 
 .carousel-indicators {
+  top: 95%;
 }
 
 .intro-text {
@@ -119,25 +123,41 @@ canvas {-ms-touch-action: double-tap-zoom;}
   .intro-text {
     width: 100%;
   }
+  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    top: 95%;
+  }
+  .jumbotron p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:568px) {
+  .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+  }
+  .intro-text {
+    width: 100%;
+    font-size: 10;
+  }
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: white;
   border: none;
-  background-color: #147FD7;
+  background-color: #002366;
 }
 
 .navbar-default .navbar-brand {
-  color: white;
+  color: #ffe400;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  color: #ffe400;
+  color: white;
   background-color: #002366;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: white;
+  color: #ffe400;
 }
 
 .container-fluid:first-of-type {
@@ -146,6 +166,9 @@ canvas {-ms-touch-action: double-tap-zoom;}
 
 .navbar-header {
   padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: center;
+
 }
 
 .navbar-right {
@@ -162,4 +185,41 @@ canvas {-ms-touch-action: double-tap-zoom;}
 
 .navbar-toggle {
   background-color: #002366;
+  padding: 1vh;
+  vertical-align: center;
+  margin-right: 2vh;
+}
+
+.navbar-brand {
+  padding: 2vh;
+}
+
+.navbar-default {
+  background-color: #002366;
+  border-color: #002366;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+
+.navbar {
+  min-height: 7vh;
+  max-height: 7vh;
+  margin-bottom: 2vh;
+}
+
+.container-fluid {
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.col-md-12 {
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.kansas-blue {
+  background-color: #002366;
+  color: #ffe400;
 }
