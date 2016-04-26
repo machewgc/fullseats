@@ -244,6 +244,7 @@ body {
 .kansas-blue {
   background-color: #002366;
   color: #ffe400;
+  text-align: justify;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -264,4 +265,12 @@ body {
   .first-column {
     padding-right: 0px;
   }
+}
+
+.kansas-text {
+  width: 75%;
+}
+
+h3 {
+  text-align: center;
 }
