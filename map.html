@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Kansas Precinct Chair Captains</title>
+    <title>precincts.info</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Kansas Precinct Chair Openings</a>
+          <a class='navbar-brand' href='index.html'>precincts.info</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -38,8 +38,16 @@
       <div class='row'>
         <div class='col-md-4'>
           <div class='well'>
+            <h4>Instructions</h4>
+            <p>Find and select your residence in the map to display your precinct name and County Election Office Address.</p>
+            <p>If you would like to apply to be your precinct’s Captain, you will need to fill out the Declaration of Intention form, have it notarized, and mail it to your County Election office.</p>
+            <a href="http://www.kssos.org/forms/Elections/PD.pdf" class="btn btn-primary" target="_blank">
+              <span class="glyphicon glyphicon-download-alt"></span> Candidacy Form
+            </a>
+          </div>
+          <div class='well'>
             <h4>
-              Address <small>(<a id='find_me' href='#'>find me</a>)</small>
+              Precinct Locator <small>(<a id='find_me' href='#'>find me</a>)</small>
             </h4>
             <p>
               <input class='form-control' id='search_address' placeholder='Enter an address or an intersection' type='text' />
@@ -53,14 +61,6 @@
               Reset
             </a>
             </br>
-          </div>
-          <div class='well'>
-            <h4>Instructions</h4>
-            <p>Find and select your residence in the map to display your precinct name and County Election Office Address.</p>
-            <p>You will need to fill out the Declaration of Intention form that needs to be notarized and mailed to your County Election office.</p>
-            <a href="http://www.kssos.org/forms/Elections/PD.pdf" class="btn btn-primary" target="_blank">
-              <span class="glyphicon glyphicon-download-alt"></span> Candidacy Form
-            </a>
           </div>
           <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
         </div>
