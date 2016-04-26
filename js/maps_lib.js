@@ -136,8 +136,7 @@
                     if (self.addrMarkerImage != '') {
                         self.addrMarker = new google.maps.Marker({
                             position: self.currentPinpoint,
-                            map: self.map,
-                            icon: self.addrMarkerImage,
+                            map: self.map,                            icon: self.addrMarkerImage,
                             animation: google.maps.Animation.DROP,
                             title: address
                         });
