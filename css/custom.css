@@ -170,7 +170,6 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   vertical-align: center;
-
 }
 
 .navbar-right {
@@ -224,4 +223,12 @@ body {
 .kansas-blue {
   background-color: #002366;
   color: #ffe400;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+}
+
+.navbar-default:hover .navbar-brand:hover {
+  color: white;
 }
