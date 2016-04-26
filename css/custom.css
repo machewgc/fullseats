@@ -77,7 +77,9 @@ canvas {-ms-touch-action: double-tap-zoom;}
   width: 75%;
 }
 
-
+body {
+  overflow-x: hidden;
+}
 
 .carousel-inner>.item {
   padding: 15px;
