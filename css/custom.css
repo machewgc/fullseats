@@ -75,6 +75,7 @@ canvas {-ms-touch-action: double-tap-zoom;}
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
   width: 75%;
+  padding-top: 2vh;
 }
 
 body {
@@ -98,7 +99,9 @@ body {
 
 .jumbotron {
   background-color: #147FD7;
-  padding: 4vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  margin-bottom: 2vh;
 }
 
 .jumbotron:first-of-type {
@@ -106,7 +109,7 @@ body {
 }
 
 .carousel-indicators {
-  top: 95%;
+  top: 90%;
 }
 
 .intro-text {
@@ -114,20 +117,32 @@ body {
   width: 75%;
   align-content: center;
   padding-top: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 6vh;
   text-align: justify;
+}
+
+@media (min-width:1367px) {
+  .intro-text {
+    padding-bottom: 10vh;
+  }
 }
 
 @media (max-width:667px) {
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    width: 100%;
+    width: 80%;
   }
   .intro-text {
-    width: 100%;
+    width: 80%;
   }
-  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
-    top: 95%;
+  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+    top: 90%;
+    right: 90%;
+
   }
+   .carousel-control .glyphicon-chevron-left {
+     top: 90%;
+     left: 90%;
+   }
   .jumbotron p {
     font-size: 15px;
   }
@@ -135,10 +150,10 @@ body {
 
 @media (max-width:568px) {
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    width: 100%;
+    width: 80%;
   }
   .intro-text {
-    width: 100%;
+    width: 80%;
     font-size: 10;
   }
 }
@@ -220,6 +235,12 @@ body {
   padding-right: 2vh;
 }
 
+.carousel {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-bottom: 2vh;
+}
+
 .kansas-blue {
   background-color: #002366;
   color: #ffe400;
@@ -231,4 +252,16 @@ body {
 
 .navbar-default:hover .navbar-brand:hover {
   color: white;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-bottom: 0px;
+}
+
+@media (min-width:769px) {
+  .first-column {
+    padding-right: 0px;
+  }
 }
