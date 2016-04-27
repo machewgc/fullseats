@@ -284,3 +284,16 @@ h3 {
   color: white;
   font-size: 200%;
 }
+
+.faqHeader {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+.panel .panel-default {
+  vertical-align: middle;
+}
