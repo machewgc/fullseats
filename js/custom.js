@@ -1,7 +1,7 @@
 $(document).ready(function(){
-
+  
     // Select and loop the container element of the elements you want to equalise
-    $('.enforce-height').each(function(){
+    $('.enforce-jumbotron-height').each(function(){
 
       // Cache the highest
       var highestBox = 0;
@@ -12,7 +12,6 @@ $(document).ready(function(){
         // If this box is higher than the cached highest then store it
         if($(this).height() > highestBox) {
           highestBox = $(this).height();
-          console.log(highestBox);
         }
 
       });
