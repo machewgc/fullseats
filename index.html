@@ -47,22 +47,17 @@
               </ol>
 
               <div class="carousel-inner center-block">
-                <div class="item active">
+                <div class="item">
                   <img src="images/Flag_of_Kansas.svg" class="img-responsive center-block"/>
                   <p class="intro-text center-block">Welcome to precincts.info! Our goal is to increase participation and representation in our democracy. We believe that engaged citizens involved at a local level are the key to turning Kansas blue.</p>
                 </div>
-                <div class="item">
+                <div class="item active">
                   <div class=container-fluid>
                     <div class ="row">
-                      <div class="col-md-6">
-                        <div class="center-block">
-                          <div id="circle" class="sunflower"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="center-block">
-                          <p>Stuff about where we are at from a progress standpoint here.</p>
-                        </div>
+                      <div class="col-md-6 center-block" id="circle"></div>
+                      <div class="col-md-6 center-block progress-text">
+                          <p class="progress-head">26%</p>
+                          <p class="progress-body">There are so many open seats we can fill with modern progressives in Kansas!</p>
                       </div>
                     </div>
                   </div>
@@ -103,7 +98,7 @@
     <script type="text/javascript" src="js/circle-progress.js"></script>
     <script>
         $('#circle').circleProgress({
-            value: 0.75,
+            value: 0.26,
             size: 500,
             thickness: 250,
             fill: {

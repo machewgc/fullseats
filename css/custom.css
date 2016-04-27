@@ -275,6 +275,12 @@ h3 {
   text-align: center;
 }
 
-.sunflower {
-  text-align: center;
+.progress-head {
+  color: white;
+  font-size:  300%;
+}
+
+.progress-body {
+  color: white;
+  font-size: 200%;
 }
