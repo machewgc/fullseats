@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
     // Select and loop the container element of the elements you want to equalise
     $('.enforce-jumbotron-height').each(function(){
 
