@@ -277,12 +277,17 @@ h3 {
 
 .progress-head {
   color: white;
-  font-size:  300%;
+  font-size:  250%;
+  width: 75%;
+  padding-left: 12.5%;
 }
 
 .progress-body {
   color: white;
   font-size: 200%;
+  width: 75%;
+  text-align: justify;
+  padding-bottom: 8vh;
 }
 
 .faqHeader {
@@ -296,4 +301,13 @@ h3 {
 
 .panel .panel-default {
   vertical-align: middle;
+}
+
+.img-responsive {
+  text-align: center;
+  width: 75%;
+}
+
+#circle {
+  text-align: center;
 }
