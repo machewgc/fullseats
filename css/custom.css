@@ -5,6 +5,14 @@ a:hover { color: #4B58A6; }
   max-width: none;
 }
 
+#circle canvas {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .filter-box {
   height: 15px;
   width: 15px;
@@ -41,7 +49,6 @@ canvas {-ms-touch-action: double-tap-zoom;}
 
 .panel-heading [data-toggle="collapse"]:after {
     font-family: 'Glyphicons Halflings';
-    content: "\e072"; /* "play" icon */
     float: right;
     color: #1B84B5;
     font-size: 18px;
@@ -277,17 +284,12 @@ h3 {
 
 .progress-head {
   color: white;
-  font-size:  250%;
-  width: 75%;
-  padding-left: 12.5%;
+  font-size:  300%;
 }
 
 .progress-body {
   color: white;
   font-size: 200%;
-  width: 75%;
-  text-align: justify;
-  padding-bottom: 8vh;
 }
 
 .faqHeader {
@@ -301,13 +303,4 @@ h3 {
 
 .panel .panel-default {
   vertical-align: middle;
-}
-
-.img-responsive {
-  text-align: center;
-  width: 75%;
-}
-
-#circle {
-  text-align: center;
 }
