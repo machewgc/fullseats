@@ -268,7 +268,7 @@ body {
   padding-bottom: 0px;
 }
 
-@media (min-width:769px) {
+@media (min-width:800px) {
   .first-column {
     padding-right: 0px;
   }
