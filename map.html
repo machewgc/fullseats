@@ -81,7 +81,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
     <script type="text/javascript" src="js/maps_lib.js"></script>
-    <script type="text/javascript" src="js.custom.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     <script type='text/javascript'>
       //<![CDATA[
         $(window).resize(function () {
@@ -103,6 +103,7 @@
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+
 
           $(':checkbox').click(function(){
             myMap.doSearch();
@@ -141,4 +142,8 @@
       //]]>
     </script>
   </body>
+  <footer>
+    <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a>
+    by <a href='http://derekeder.com'>Derek Eder</a>.
+  </footer>
 </html>

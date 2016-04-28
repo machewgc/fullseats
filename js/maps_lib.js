@@ -258,6 +258,7 @@
         }).fail(function(response) {
             self.handleError(response);
         });
+
     };
 
     MapsLib.prototype.handleError = function (json) {
