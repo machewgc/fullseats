@@ -40,7 +40,7 @@
             this.addrMarkerImage = "images/blue-pushpin.png"
 
     	this.currentPinpoint = null;
-    	$("#result_count").html("");
+    	//$("#result_count").html("");
 
         this.myOptions = {
             zoom: this.defaultZoom,
