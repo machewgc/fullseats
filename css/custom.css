@@ -157,7 +157,12 @@ body {
    }
   .jumbotron p {
     font-size: 15px;
+
   }
+}
+
+p {
+
 }
 
 @media (max-width:568px) {
@@ -167,6 +172,9 @@ body {
   .intro-text {
     width: 80%;
     font-size: 10;
+  }
+  strong {
+    font-size: 30px;
   }
 }
 
@@ -207,8 +215,8 @@ body {
   background-color: #ffe400;
 }
 
-.col-md-12 {
-  height: 80vh;
+.col-md-6 {
+
 }
 
 .navbar-toggle {
@@ -235,6 +243,10 @@ body {
   min-height: 7vh;
   max-height: 7vh;
   margin-bottom: 2vh;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #002366;
 }
 
 .container-fluid {
@@ -308,4 +320,16 @@ h3 {
 
 .panel .panel-default {
   vertical-align: middle;
+}
+
+strong {
+  font-size: 50px;
+}
+
+h1 {
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 30px;
 }
