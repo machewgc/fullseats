@@ -280,7 +280,7 @@ p {
   padding-bottom: 0px;
 }
 
-@media (min-width:800px) {
+@media (min-width:992px) {
   .first-column {
     padding-right: 0px;
   }
@@ -327,4 +327,12 @@ h1 {
 
 h2 {
   font-size: 30px;
+}
+
+.jumbotron .col-sm-12 {
+  margin-bottom: 0px;
+}
+
+.first-block {
+  margin-bottom: 0px;
 }
