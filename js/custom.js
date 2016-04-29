@@ -45,4 +45,24 @@ $(window).resize(function () {
 
   });
 
+  var currentLocation = window.location;
+
+  if (currentLocation.toString().indexOf("#") !== -1) {
+    document.getElementById("search").click();
+  }
+
+});
+
+$(window).on("orientationchange",function(){
+  var currentLocation = window.location;
+  if (currentLocation.toString().indexOf("#") !== -1) {
+    document.getElementById("search").click();
+  }
+});
+
+$(window).on("orientation",function(){
+  var currentLocation = window.location;
+  if (currentLocation.toString().indexOf("#") !== -1) {
+    document.getElementById("search").click();
+  }
 });
