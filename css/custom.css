@@ -152,7 +152,12 @@ body {
    }
   .jumbotron p {
     font-size: 15px;
+    margin-bottom: 0px;
   }
+}
+
+p {
+  margin-bottom: 0px;
 }
 
 @media (max-width:568px) {
@@ -303,4 +308,8 @@ h3 {
 
 .panel .panel-default {
   vertical-align: middle;
+}
+
+strong {
+  font-size: 100px;
 }
