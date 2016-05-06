@@ -300,16 +300,16 @@ p {
   width: 75%;
 }
 
-/*.connected {
+.connected {
   background-image: url(../images/sunflower.png);
   background-repeat: no-repeat;
-  background-position: center;
-  /*border-top: 48px solid #e8e8e8;
+  background-position: center top;
+  border-top: 48px solid #002366;
 
-  padding-top: 48px;
+
   background-size: 300px;
-  background-blend-mode: luminosity;
-}*/
+  background-blend-mode: screen;
+}
 
 h3 {
   text-align: center;
@@ -350,8 +350,15 @@ h2 {
   font-size: 30px;
 }
 
+.first-block {
+  padding-top: 0px;
+}
+
 @media (max-width:992px) {
 .first-block {
   margin-bottom: 0px;
+  padding-top: 0px;
+
+
 }
 }
