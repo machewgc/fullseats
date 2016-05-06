@@ -15,6 +15,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Varela&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script type="text/javascript" src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,7 +35,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class='active'><a href="index.html">Home</a></li>
-            <li><a href="map.html">Map</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -43,31 +43,66 @@
     </div>
     <div class='container-fluid'>
       <div class ="row enforce-jumbotron-height">
-
-          <div class='col-md-6 col-sm-12 jumbotron kansas-blue first-block' id='circle'><p style="text-align:left; margin-bottom:50px">Only <strong></strong> of Precinct Committee positions in Kansas are currently filled.</p>
-          </div>
-          <div class="col-md-6 col-sm-12 center-block jumbotron kansas-blue second-block">
-            <strong>Empty Seats</strong>
-              <p style="text-align:left">Having this many means that many Kansans don't have representation in their parties, leaving many important decisions to just a few people.</p><br><br>
-              <strong>The Solution?</strong>
-              <p style="text-align:left">Fill these empty seats with civic-minded individuals (that's you!) who will engage their neighbors and bring attention to their concerns.</p>
-          </div>
+        <div class='col-md-6 col-sm-12 jumbotron kansas-blue first-block' id='circle'><p style="text-align:left; margin-bottom:50px">Only <strong></strong> of Precinct Committee positions in Kansas are currently filled.</p>
         </div>
-
-
-      <div class='row enforce-jumbotron-height'>
+        <div class="col-md-6 col-sm-12 center-block jumbotron kansas-blue second-block">
+          <strong>Empty Seats</strong>
+            <p style="text-align:left">Having this many means that many Kansans don't have representation in their parties, leaving many important decisions to just a few people.</p><br><br>
+            <strong>The Solution?</strong>
+            <p style="text-align:left">Fill these empty seats with civic-minded individuals (that's you!) who will engage their neighbors and bring attention to their concerns.</p>
+            <p>
+              <a href='#action'><button type="button" class="btn btn-danger">Be the change</button></a>
+              <a href='faq.html'><button type="button" class="btn btn-danger">More information</button></a>
+            </p>
+        </div>
+      </div>
+      <div class="col-xs-12"><hr></div>
+      <div class="row">
+        <h1 class="clean-text text-center">What is a Precinct Captain?</h1>
+      </div>
+      <div class='row'>
         <!--div class="clearfix"></div-->
-        <div class='column col-md-6 first-column'>
-          <div class='jumbotron kansas-blue'>
-            <a href="faq.html"><img src="images/information-uniform.png" class="img-responsive center-block"></img></a>
-            <p class="center-block kansas-text">Check out the FAQ for more info on being a Precinct Captain!</p>
-          </div>
+        <div class='column col-md-6'>
+          <p class="clean-text">
+            <ul class="list-unstyled" style="text-align:right">
+              <li>A volunteer</li>
+              <li>A neighbor</li>
+              <li>An organizer</li>
+              <li>An activist</li>
+              <li>An advocate</li>
+              <li>You!</li>
+            </ul>
+          </p>
         </div>
         <div class='column col-md-6'>
-          <div class='jumbotron kansas-blue'>
-            <a href="map.html"><img src="images/kansasmap-uniform.png" class="img-responsive center-block"></img></a>
-            <p class="center-block kansas-text">Look up your precinct on the map and run for Precinct Captain!</p>
+          <img src="images/pc.png" class="img-responsive" style="max-width:25%"></img>
+        </div>
+      </div>
+      <div class="col-xs-12"><hr></div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <div class='well' id="action">
+            <h4>
+              Find and click on your precinct <small>(<a id='find_me' href='#map_canvas'>or just use gps</a>)</small>
+            </h4>
+            <p>Search for your residence in the map to display your precinct name and County Election Office Address.</p>
+            <p>If you would like to apply to be your precinct’s Captain, you will need to fill out the Declaration of Intention form, have it notarized, and mail it to your County Election office. Applications must be received by June 1<sup>st</sup>.</p>
+            <p>Currently we only have current chairholder data from the Democrats, but will be adding Republicans shortly. The application process is the same for either party.<p>
+            </p>
+              <input class='form-control' id='search_address' placeholder='Enter an address or an intersection' type='text' />
+            </p>
+            <a class='btn btn-primary' id='search' href="#map_canvas">
+              <i class='glyphicon glyphicon-search'></i>
+              Search
+            </a>
+            <a class='btn btn-default' id='reset' href='#'>
+              <i class='glyphicon glyphicon-repeat'></i>
+              Reset
+            </a>
+            </br>
           </div>
+          <div id='map_canvas'></div>
+          <div class='spacer'> </div>
         </div>
       </div>
     </div>
@@ -75,7 +110,9 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/circle-progress.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/jquery.address.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="js/maps_lib.js"></script>
 
     <script>
         $('#circle').circleProgress({
@@ -90,5 +127,67 @@
           $(this).find('strong').html(parseInt(26 * progress) + '<i>%</i>');
       });
     </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        $(window).resize(function () {
+          var h = $(window).height(),
+            offsetTop = 105; // Calculate the top offset
+
+          $('#map_canvas').css('height', (h - offsetTop));
+        }).resize();
+
+        $(function() {
+          var myMap = new MapsLib({
+            fusionTableId:          "1Yo3hgMi_f2PQ4WinuGoGfkMhRb67ivualvPe7Le4",
+            /*fusionTableId:        "1gnpTUCwXS5G4qYqdQHljuJA05lakFMRhTMKBd43S",*/
+            /*fusionTableId:        "1CXVoElvqucpD6KHSA-5VZDZButQx3W-C43y3NstS",
+            /*fusionTableId:        "1OznVqT7hDX0l1VW7Xdo1TTI50SZKhw-4GSBMOjYw",
+            /*fusionTableId:      "1C2udCrunvxp5MZ_WI-jJ1Ci-6_lnRUMVtrlf4mxs",*/
+            /*googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",*/
+            locationColumn:     "geometry",
+            map_center:         [38.500000, -98.419000],
+            locationScope:      "Kansas"
+          });
+
+          var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+
+
+          $(':checkbox').click(function(){
+            myMap.doSearch();
+          });
+
+          $(':radio').click(function(){
+            myMap.doSearch();
+          });
+
+          $('#search_radius').change(function(){
+            myMap.doSearch();
+          });
+
+          $('#search').click(function(){
+            myMap.doSearch();
+          });
+
+          $('#find_me').click(function(){
+            myMap.findMe();
+            return false;
+          });
+
+          $('#reset').click(function(){
+            myMap.reset();
+            return false;
+          });
+
+          $(":text").keydown(function(e){
+              var key =  e.keyCode ? e.keyCode : e.which;
+              if(key === 13) {
+                  $('#search').click();
+                  return false;
+              }
+          });
+        });
+      //]]>
+    </script>
+    <script type="text/javascript" src="js/custom.js"></script>
   </body>
 </html>
