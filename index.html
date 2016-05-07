@@ -45,6 +45,8 @@
       <div class ="row enforce-jumbotron-height">
         <div class='col-md-6 col-sm-12 jumbotron kansas-blue first-block connected' id='circle'><p style="text-align:left; margin-bottom:50px">Only <strong></strong> of Precinct Committee positions in Kansas are currently filled.</p>
         </div>
+        <div class='col-md-6 col-sm-12 jumbotron kansas-blue first-block connected' id='placeholder'><img src="images/placeholder.png"></img><p style="text-align:left; margin-bottom:50px">Only <strong>0%</strong> of Precinct Committee positions in Kansas are currently filled.</p>
+        </div>
         <div class="col-md-6 col-sm-12 center-block jumbotron kansas-blue second-block">
           <strong>Empty Seats</strong>
             <p style="text-align:left">Having this many means that many Kansans don't have representation in their parties, leaving many important decisions to just a few people.</p><br><br>
@@ -113,20 +115,6 @@
     <script type="text/javascript" src="js/jquery.address.js"></script>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
     <script type="text/javascript" src="js/maps_lib.js"></script>
-
-    <script>
-        $('#circle').circleProgress({
-            value: .26,
-            size: 300,
-            thickness: 150,
-            fill: {
-                gradient: ["red", "orange"],
-                image: "images/sunflower.png"
-            }
-          }).on('circle-animation-progress', function(event, progress) {
-          $(this).find('strong').html(parseInt(26 * progress) + '<i>%</i>');
-      });
-    </script>
     <script type='text/javascript'>
       //<![CDATA[
         $(window).resize(function () {
@@ -189,5 +177,22 @@
       //]]>
     </script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+      setTimeout(function(){
+        $('#placeholder').hide();
+        $('#circle').show();
+        $('#circle').circleProgress({
+            value: .26,
+            size: 300,
+            thickness: 150,
+            fill: {
+                gradient: ["red", "orange"],
+                image: "images/sunflower.png"
+            }
+          }).on('circle-animation-progress', function(event, progress) {
+              $(this).find('strong').html(parseInt(26 * progress) + '<i>%</i>');
+          });
+      }, 1000);
+    </script>
   </body>
 </html>
