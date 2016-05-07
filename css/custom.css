@@ -406,3 +406,10 @@ h2 {
   padding-top:20px;
   margin-bottom:0
 }
+
+@media (max-width:992px) {
+  .how-to-text {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+}
