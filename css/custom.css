@@ -374,19 +374,22 @@ h2 {
 }
 
 .contact-card {
-  padding: 5%;
-  background-image: url("../images/paper.png");
-}
-
-.contact-card-left {
+  padding: 3%;
   text-align: left;
-}
-
-.contact-card-right {
-  text-align: right;
 }
 
 .captain-description {
   padding-right: 10vw;
   text-align: justify;
+}
+
+.table-no-border th, .table-no-border td {
+  border-top: none;
+  padding-top: 10px;;
+  padding-right: 5%;
+  white-space: nowrap
+}
+
+.cc-img {
+  max-width: 300px;
 }
