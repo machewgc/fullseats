@@ -399,3 +399,10 @@ h2 {
     width: 200px;
     height: auto;
 }
+
+.how-to-text {
+  text-align: justify;
+  padding-bottom:20px;
+  padding-top:20px;
+  margin-bottom:0
+}
