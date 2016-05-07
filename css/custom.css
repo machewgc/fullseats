@@ -413,3 +413,10 @@ h2 {
     padding-right: 20vw;
   }
 }
+
+@media (max-width:667px) {
+  .how-to-text {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
