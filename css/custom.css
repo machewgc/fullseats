@@ -16,6 +16,7 @@ a:hover { color: #4B58A6; }
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 1px;
 }
 
 #circle {
@@ -392,4 +393,9 @@ h2 {
 
 .cc-img {
   max-width: 300px;
+}
+
+.row-leader {
+    width: 200px;
+    height: auto;
 }
