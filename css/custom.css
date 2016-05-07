@@ -372,3 +372,16 @@ h2 {
 .clean-text {
   font-family: 'Varela';
 }
+
+.contact-card {
+  padding: 5%;
+  background-image: url("../images/paper.png");
+}
+
+.contact-card-left {
+  text-align: left;
+}
+
+.contact-card-right {
+  text-align: right;
+}
