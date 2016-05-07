@@ -385,3 +385,8 @@ h2 {
 .contact-card-right {
   text-align: right;
 }
+
+.captain-description {
+  padding-right: 10vw;
+  text-align: justify;
+}
